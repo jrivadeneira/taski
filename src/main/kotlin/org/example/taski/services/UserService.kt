@@ -17,4 +17,8 @@ class UserService(
     )
 
     fun createUser(user: User): Mono<User> = userRepo.save(user)
+
+    fun signIn(username: String): Mono<User> = userRepo.findByUsername(username).switchIfEmpty(
+            Mono.error(RuntimeException("User with username $username not found"))
+    )
 }

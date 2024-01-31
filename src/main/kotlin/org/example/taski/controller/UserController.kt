@@ -1,5 +1,6 @@
 package org.example.taski.controller
 
+import org.example.taski.model.SignInRequest
 import org.example.taski.model.User
 import org.example.taski.model.UserRequest
 import org.example.taski.services.UserService
@@ -29,5 +30,11 @@ class UserController
                 tasksCompleted = user.tasksCompleted
         )
         return userService.createUser(newUser)
+    }
+
+    @CrossOrigin
+    @PostMapping("/sign-in")
+    fun signIn(@RequestBody signIn: SignInRequest): Mono<User> {
+        return userService.signIn(signIn.username)
     }
 }

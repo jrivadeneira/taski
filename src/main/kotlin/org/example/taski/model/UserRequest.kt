@@ -10,3 +10,8 @@ data class UserUpdateRequest (
         val username: String,
         val tasksCompleted: Int = 0,
         )
+
+data class SignInRequest (
+        val username: String,
+//        val password: String
+        )
