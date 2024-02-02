@@ -1,0 +1,59 @@
+.task-list{
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.task-list-title {
+  //dark gray background
+  background-color: #2f2f2f;
+  color: #f5f5f5;
+  padding: 12px;
+//  rounded top corners
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+//can't have a border on the last one
+.task-row:last-child {
+  border-bottom: none;
+}
+
+//header color classes
+.today {
+  // warning yellow
+  background-color: #f0ad4e;
+}
+
+.tomorrow {
+  // friendly blue
+  background-color: #1d6da2;
+}
+
+.completed {
+  // friendly green
+  background-color: #1da21d;
+}
+
+.overdue {
+  // danger red
+  background-color: #cc1d1d;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+
+// DON'T FORGET main background color is :#f5f5f5
+// Blue highlight color is #258dd2
+// dark gray is #2f2f2f
+// should have variables for these in the main styles.scss file
+// nav background was #2c3e50

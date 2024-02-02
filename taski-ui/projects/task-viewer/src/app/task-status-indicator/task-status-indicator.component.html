@@ -1,0 +1,6 @@
+<div class="status-indicator"
+[ngClass]="{
+'not-started': task.status === 'Not Started',
+'in-progress': task.status === 'In Progress',
+'completed': task.status === 'Completed'}"
+(click)="incrementStatus()"></div>

@@ -1,0 +1,21 @@
+<div class="task-list" *ngIf="tasks.length">
+  <!-- header for task list -->
+  <div class="task-list-title"
+       [ngClass]="{
+       'overdue': color === 'red',
+       'completed': color === 'green',
+       'today': color === 'yellow',
+       'tomorrow': color === 'blue'}"
+  >{{ title }}
+  </div>
+  <!-- list of tasks -->
+  <div *ngFor="let eachTask of tasks"
+       class="task-row"
+       [ngClass]="{'completed-task': eachTask.status === 'Completed'}">
+    <div [routerLink]="['task-edit', eachTask.id]">
+      {{ eachTask.title }}
+    </div>
+    <!--  status indicator-->
+    <ti-task-status-indicator [task]="eachTask"></ti-task-status-indicator>
+  </div>
+</div>

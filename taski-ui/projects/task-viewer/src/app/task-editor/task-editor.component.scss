@@ -1,0 +1,42 @@
+.task-editor{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: left;
+  height: 100%;
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-right: 16px;
+}
+.task-description{
+  height: 150px;
+  resize: none;
+  font-family: Helvetica, sans-serif;
+}
+.save-button{
+  // friendly blue
+  background-color: #1d6da2;
+  border-color: #1d6da2;
+
+}
+
+.save-button:hover{
+  // friendly blue
+  background-color: #258dd2;
+  border-color: #258dd2;
+}
+
+label{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #2f2f2f;
+}
+
+.form-check-label{
+  line-height: 7px;
+}
+
+.form-check{
+  margin-top: 10px;
+}

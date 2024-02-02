@@ -1,0 +1,15 @@
+.status-indicator {
+  border-radius: 3px;
+  width: 24px;
+  height: 24px;
+  line-height: 12px;
+  background-color: #ccc;
+}
+
+.in-progress {
+  background-color: #f0ad4e;
+}
+
+.completed {
+  background-color: #1da21d;
+}

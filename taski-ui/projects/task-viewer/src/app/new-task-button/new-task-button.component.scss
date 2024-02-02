@@ -1,0 +1,20 @@
+.new-task-button{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 100;
+  font-size: 50px;
+  border-radius: 20px;
+  background-color: #1d6da2;
+  color: white;
+  border-color: #1d6da2;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  line-height: 64px;
+}
+
+.new-task-button:hover{
+  background-color: #258dd2;
+  border-color: #258dd2;
+}

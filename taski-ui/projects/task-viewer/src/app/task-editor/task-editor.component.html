@@ -1,0 +1,35 @@
+<div class="task-editor">
+  <label>Title</label>
+  <input #titleField class="form-control" type="text" [value]="title()" (input)="title.set(titleField.value)">
+  <label>Description</label>
+  <textarea class="form-control task-description" #descriptionField [value]="description()" (input)="description.set(descriptionField.value)">
+    </textarea>
+  <label>Due Date</label>
+  <input #dueDateField class="form-control" type="datetime-local" [value]="dueDate()" (input)="dueDate.set(dueDateField.value)">
+  <label>Status</label>
+  <select #statusField class="form-select" [value]="status()" (input)="status.set(statusField.value)">
+    <option *ngFor="let eachValue of statusOptions" [value]="eachValue">{{ eachValue }}</option>
+  </select>
+  <label>Category</label>
+  <select #categoryField class="form-select" [value]="category()" (input)="category.set(categoryField.value)">
+    <option *ngFor="let eachValue of categoryOptions" [value]="eachValue">{{ eachValue }}</option>
+  </select>
+  <label>Assigned To</label>
+  <select #assignedToField class="form-select" [value]="assignedTo()" (input)="assignedTo.set(assignedToField.value)">
+    <option *ngFor="let eachValue of members" [value]="eachValue">{{ eachValue }}</option>
+  </select>
+  <div class="form-check">
+    <input #archivedField class="form-check-input" type="checkbox" [checked]="archived()" (input)="archived.set(archivedField.checked)">
+    <label class="form-check-label">Archived</label>
+  </div>
+  <label>Created By</label>
+  <select #createdByField class="form-select" [value]="createdBy()" (input)="createdBy.set(createdByField.value)">
+    <option *ngFor="let eachValue of members" [value]="eachValue">{{ eachValue }}</option>
+  </select>
+  <label>Created Date</label>
+  <label>{{ createdDate() }}</label>
+  <div>
+    <button class="btn btn-primary save-button" (click)="saveTask()">Save</button>
+    <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
+  </div>
+</div>
